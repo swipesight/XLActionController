@@ -133,7 +133,11 @@ open class DynamicCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
 
     private func isRTL(for view: UIView) -> Bool {
-        return UIView.userInterfaceLayoutDirection(for: view.semanticContentAttribute) == .rightToLeft
+        if #available(iOS 9.0, *) {
+            return UIView.userInterfaceLayoutDirection(for: view.semanticContentAttribute) == .rightToLeft
+        } else {
+            return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+        }
     }
 
     @discardableResult
