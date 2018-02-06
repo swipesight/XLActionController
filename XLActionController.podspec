@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'http://twitter.com/xmartlabs'
   spec.authors  = { 'Miguel Revetria' => 'miguel@xmartlabs.com', 'Martin Barreto' => 'martin@xmartlabs.com' }
   spec.source   = { :git => 'https://github.com/xmartlabs/XLActionController.git', :tag => spec.version }
-  spec.ios.deployment_target = '9.0'
+  spec.ios.deployment_target = '8.0'
   spec.ios.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
   spec.requires_arc = true
 
