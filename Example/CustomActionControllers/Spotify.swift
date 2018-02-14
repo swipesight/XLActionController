@@ -151,7 +151,7 @@ open class SpotifyActionController: ActionController<SpotifyCell, ActionData, Sp
         
         cancelView?.frame.origin.y = view.bounds.size.height // Starts hidden below screen
         cancelView?.layer.shadowColor = UIColor.black.cgColor
-      cancelView?.layer.shadowOffset = CGSize( width: 0, height: -4)
+        cancelView?.layer.shadowOffset = CGSize( width: 0, height: -4)
         cancelView?.layer.shadowRadius = 2
         cancelView?.layer.shadowOpacity = 0.8
     }
@@ -168,6 +168,7 @@ open class SpotifyActionController: ActionController<SpotifyCell, ActionData, Sp
         settings.cancelView.showCancel = true
         settings.animation.scale = nil
         settings.animation.present.springVelocity = 0.0
+        settings.cancelView.hideCollectionViewBehindCancelView = true
         
         cellSpec = .nibFile(nibName: "SpotifyCell", bundle: Bundle(for: SpotifyCell.self), height: { _ in 60 })
         headerSpec = .cellClass( height: { _ in 84 })
